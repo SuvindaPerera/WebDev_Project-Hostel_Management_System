@@ -57,6 +57,32 @@ h1 {
           align-items: flex-start;
 }
 
+.container-student {
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 30px;
+  background-color:#001031;
+  color: #ffffff;
+  align-items: center;
+  text-align: Left;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.studentroom {
+  align-items: flex-end;
+  justify-content: right;
+  text-align: right;
+}
+
+.appealbutton {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
 
 .loginbg {
   margin-top: 5vw;
@@ -156,24 +182,12 @@ a:focus {
 
 .sub_page .hero_area {
   min-height: auto;
+  background-image: url("images/bg.jpg");
 }
 
-.sub_page .hero_area .bg-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-.sub_page .hero_area .bg-box img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right top;
-     object-position: right top;
-}
+
+
 
 .header_section {
   padding: 15px 0;
