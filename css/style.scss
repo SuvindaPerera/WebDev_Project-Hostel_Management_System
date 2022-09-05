@@ -83,7 +83,7 @@ h2 {
     font-weight: bold;
 
     span {
-      color: $primary1;
+      color: $primary2;
     }
   }
 
@@ -131,8 +131,8 @@ a:focus {
   height: 100%;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
   }
 }
@@ -169,6 +169,9 @@ a:focus {
 }
 
 .navbar-brand {
+  .navbarlogo {
+    height: 60px;
+  }
   @include second-font();
 
   span {
@@ -182,15 +185,17 @@ a:focus {
   padding: 0;
 
   .navbar-nav {
-    padding-left: 18%;
 
     .nav-item {
+      .navbarlogo{
+        display: none;
+      }
       .nav-link {
         padding: 5px 20px;
         color: $white;
-        text-align: center;
-        text-transform: uppercase;
+        text-align: justify;
         border-radius: 5px;
+        
         transition: all 0.3s;
       }
 
@@ -199,6 +204,35 @@ a:focus {
         .nav-link {
           color: $primary1;
         }
+      }
+    }
+  }
+}
+
+.loginbg{
+  background-color: $primary1;
+  padding: 7.5% 20%;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  &:hover{
+    background-color: darken($color: $primary2, $amount: 15);
+  }
+  .container_login{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+
+    .login-btn{
+      background-color: $primary1;
+      border-radius: 50px;
+      color: #ffffff;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+      &:hover{
+        background-color: darken($color: $primary1, $amount: 15);
       }
     }
   }
@@ -812,7 +846,7 @@ a:focus {
 /* footer section*/
 
 .footer_section {
-  background-color: $primary2;
+  background-color: #001031;
   color: $white;
   padding: 75px 0 40px 0;
   text-align: center;
@@ -823,6 +857,10 @@ a:focus {
 
   h4,
   .footer-logo {
+    .footerunilogo {
+      height: 100px;
+      margin: 0 auto;
+    }
     font-weight: 600;
     margin-bottom: 20px;
     @include second-font();
@@ -830,6 +868,7 @@ a:focus {
 
   p {
     color: #dbdbdb;
+
   }
 
   .footer-col {
@@ -841,18 +880,13 @@ a:focus {
     .contact_link_box {
       display: flex;
       flex-direction: column;
-
-      a {
-        margin: 5px 0;
-        color: $white;
-
-        i {
-          margin-right: 5px;
-        }
-
-        &:hover {
+      align-items: center;
+        .wardencontact {
+          color: #dbdbdb;
+        &:hover{
           color: $primary1;
         }
+      }
       }
     }
   }
@@ -905,6 +939,65 @@ a:focus {
       }
     }
   }
+
+// .aboutBG{
+//   text-align: center;
+//   height: 100%;
+//   .aboutTitle{
+//     font-size: 2em;
+//     font-weight: 600;
+//     margin-bottom: 20px;
+//     align-items: center;
+//     color: #fff;
+//   }
+//   .aboutDescription{
+//     font-size: 1em;
+//     font-weight: 400;
+//     align-items: center;
+//     color: #fff;
+//   }
+  
+// }
+
+.aboutbg{
+  background-color: $primary1;
+  padding: 7.5% 20%;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  &:hover{
+    background-color: darken($color: $primary2, $amount: 15);
+  }
+  .container_about{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+
+    .about-btn{
+      background-color: $primary1;
+      border-radius: 50px;
+      color: #ffffff;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+      &:hover{
+        background-color: darken($color: $primary1, $amount: 15);
+      }
+      
+    }
+    .aboutTitle{
+      color: #fff;
+    }
+   .aboutDescription{
+      color: #fff;
+    }
+  }
 }
+
+
+
+
+
 
 // end footer section
